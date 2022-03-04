@@ -1,0 +1,29 @@
+{
+  "name": "ts-leetcode",
+  "version": "1.0.0",
+  "description": "ts刷leetcode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yzffvinz/ts-leetcode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yzffvinz/ts-leetcode/issues"
+  },
+  "homepage": "https://github.com/yzffvinz/ts-leetcode#readme",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/eslint-plugin": "^7.16.5",
+    "@ecomfe/eslint-config": "^7.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "typescript": "^4.6.2"
+  }
+}
