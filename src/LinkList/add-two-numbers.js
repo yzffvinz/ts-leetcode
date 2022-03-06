@@ -1,4 +1,3 @@
-"use strict";
 class ListNode {
     constructor(val, next) {
         this.val = (val === undefined ? 0 : val);

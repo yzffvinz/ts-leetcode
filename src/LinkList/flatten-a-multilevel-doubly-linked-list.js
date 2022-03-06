@@ -1,4 +1,3 @@
-"use strict";
 class SNode {
     constructor(val, prev, next, child) {
         this.val = (val === undefined ? 0 : val);
