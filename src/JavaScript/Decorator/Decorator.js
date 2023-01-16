@@ -1,28 +1,22 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-const throttle = time => {
-    let prev = new Date();
+// declare const fn: CallableFunction;
+const throttle = (duration) => {
+    let prev = new Date().getTime();
     return (target, name, descriptor) => {
         const func = descriptor.value;
         if (typeof func === 'function') {
             descriptor.value = function (...args) {
-                const now = new Date();
-                if (now - prev > wait) {
-                    fn.apply(this, args);
-                    prev = new Date();
+                const now = new Date().getTime();
+                if (now - prev > duration) {
+                    func.apply(this, args);
+                    prev = new Date().getTime();
                 }
             };
         }
     };
 };
-class Util {
-    scroll() {
-    }
-}
-__decorate([
-    throttle(50)
-], Util.prototype, "scroll", null);
+throttle;
+// class Util {
+//     @throttle(50)
+//     scroll() {
+//     }
+// }

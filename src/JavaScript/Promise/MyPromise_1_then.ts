@@ -1,6 +1,4 @@
-type PromiseState = 'pending' | 'resolved' | 'rejected';
-type Callback = (data: any) => any;
-type Executor = (resolve?: Callback, reject?: Callback) => any;
+import {PromiseState, Callback, Executor} from './types';
 
 class MyPromise {
     state: PromiseState;
