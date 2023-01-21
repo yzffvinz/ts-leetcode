@@ -10,7 +10,13 @@ function useState(initialValue) {
         const cursorForSetter = cursor;
         setter = nextState => {
             if (states[cursorForSetter] !== nextState) {
-                states[cursorForSetter] = nextState;
+                if (nextState instanceof Function) {
+                    states[cursorForSetter] = nextState(states[cursorForSetter]);
+                }
+                else {
+                    states[cursorForSetter] = nextState;
+
+                }
                 renderer && renderer();
             }
         };

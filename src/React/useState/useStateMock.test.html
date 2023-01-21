@@ -35,6 +35,14 @@
             });
             div.appendChild(buttonC);
 
+            // add functional setter
+            const buttonD = document.createElement('button');
+            buttonD.innerHTML = 'b + 2 with functional setter';
+            buttonD.addEventListener('click', () => {
+                setB(b => b + 2);
+            });
+            div.appendChild(buttonD);
+
             return div;
         }
 
