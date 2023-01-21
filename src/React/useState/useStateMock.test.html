@@ -18,13 +18,22 @@
             const div = document.createElement('div');
             const buttonA = document.createElement('button');
             const buttonB = document.createElement('button');
-            buttonA.innerText = a;
-            buttonB.innerText = b;
+            buttonA.innerText = `a: ${a}`;
+            buttonB.innerText = `b: ${b}`;
             buttonA.addEventListener('click', () => setA(a + 1));
             buttonB.addEventListener('click', () => setB(b + 1));
-
             div.appendChild(buttonA);
             div.appendChild(buttonB);
+
+            // add async promt trigger c
+            const buttonC = document.createElement('button');
+            buttonC.innerHTML = 'async promt a';
+            buttonC.addEventListener('click', () => {
+                setTimeout(() => {
+                    alert(a);
+                }, 3000);
+            });
+            div.appendChild(buttonC);
 
             return div;
         }
